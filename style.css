@@ -25,13 +25,15 @@ footer {
   font-weight: 600;
 }
 
-#icon {
-  height: 3rem;
-}
-
 /* Typography */
 
 .body {
   color: #63783d;
   font-size: 1.2rem;
+}
+
+/* imagenes */
+
+#icon {
+  height: 3rem;
 }
