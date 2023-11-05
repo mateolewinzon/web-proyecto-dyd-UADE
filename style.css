@@ -32,8 +32,27 @@ footer {
   font-size: 1.2rem;
 }
 
+h2 {
+  font-size: 4rem;
+  font-weight: 700 !important;
+}
+
 /* imagenes */
 
 #icon {
   height: 3rem;
+}
+
+/* carousel */
+
+.carousel-item img {
+  height: 25rem;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  color: white !important;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial !important;
 }
