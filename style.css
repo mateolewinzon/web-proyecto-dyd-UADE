@@ -43,6 +43,10 @@ h2 {
   height: 3rem;
 }
 
+#image-bg {
+  background-image: url('img/pattern-background.png');
+}
+
 /* carousel */
 
 .carousel-item img {
@@ -73,6 +77,21 @@ h2 {
 }
 .txtWhite{
   color: white !important;
+}
+
+#green-container{
+  background-color: #76993D
+}
+.light-green-labels {
+  background-color: #A2D74A;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #134204;
+  font-weight: 700;
+  border-radius: 0.6rem;
 }
 
 @media (max-width: 600px) {
