@@ -23,10 +23,16 @@ const DONATION_OPTIONS = [
   },
 ];
 
+const formatAmount = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  })
+
 function renderDonationItem({ amount, description, url }) {
+
   return `<div class="row">
-    <div class="col-xs-12 col-sm-2"><a href="${url}" target="_blank" class="light-green-labels text-decoration-none">${amount}</a></div>
-    <div class="col-xs-12 col-md-10 d-flex align-items-center"><a class="text-decoration-none" href="${url}" target="_blank" ><h3 class="text-white">${description}</h3></a></div>
+    <div class="col-xs-12 col-sm-3"><a href="${url}" target="_blank" class="light-green-labels text-decoration-none">${formatAmount.format(amount)}</a></div>
+    <div class="col-xs-12 col-md-9 d-flex align-items-center"><a class="text-decoration-none" href="${url}" target="_blank" ><h3 class="text-white">${description}</h3></a></div>
   </div>`;
 }
 
