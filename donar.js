@@ -23,9 +23,9 @@ const DONATION_OPTIONS = [
   },
 ];
 
-const formatAmount = new Intl.NumberFormat('en-US', {
+const formatAmount = new Intl.NumberFormat('es-AR', {
     style: 'currency',
-    currency: 'USD',
+    currency: 'ARS',
   })
 
 function renderDonationItem({ amount, description, url }) {
