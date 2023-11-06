@@ -56,3 +56,28 @@ h2 {
   transform: translateY(-50%);
   bottom: initial !important;
 }
+
+.miniLogo{
+  width: 60%;
+}
+
+.foto{
+  width: 100%;
+}
+
+.card-green{
+  background-color: #7fcf43;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+}
+.txtWhite{
+  color: white !important;
+}
+
+@media (max-width: 600px) {
+  #uadeLogo{
+    width: 50%;
+    height: 50%;
+  }
+}
