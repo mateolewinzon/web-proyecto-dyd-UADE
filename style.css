@@ -74,8 +74,48 @@ h3{
   width: 100%;
 }
 
+.input-contact{
+  width: 90%;
+  background-color: #DCEEAC;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  color: #63783D;
+  opacity: 1;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.textArea-contact{
+  min-height:100px;
+}
+
+.input-contact::placeholder {
+  font: 1.25rem/3 sans-serif;
+  text-align: center;
+  color: #63783D;
+}
+
+.input-contact::-webkit-input-placeholder {
+  text-align: center;
+}
+
+.input-contact:-moz-placeholder {
+  text-align: center;  
+}
+
+.input-contact::-moz-placeholder {
+  text-align: center;  
+}
+
+.input-contact:-ms-input-placeholder {  
+  text-align: center; 
+}
+
 .card-green{
-  background-color: #7fcf43;
+  background-color: #9BB983;
   border-radius: 20px;
   margin: 20px;
   padding: 20px;
@@ -85,7 +125,8 @@ h3{
 }
 
 #green-container{
-  background-color: #76993D
+  background-color: #76993D;
+  border-radius: 15px;
 }
 .light-green-labels {
   background-color: #A2D74A;

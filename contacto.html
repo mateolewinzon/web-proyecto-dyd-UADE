@@ -17,12 +17,15 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="donar.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
     <header>
@@ -50,7 +53,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link navbarNavOptions active" href="./que-hacemos.html"
+                <a class="nav-link navbarNavOptions" href="./que-hacemos.html"
                   >¿Qué hacemos?</a
                 >
               </li>
@@ -65,7 +68,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link navbarNavOptions" href="./contacto.html"
+                <a class="nav-link navbarNavOptions active" href="./contacto.html"
                   >Contacto</a
                 >
               </li>
@@ -74,61 +77,57 @@
         </div>
       </nav>
     </header>
-    <main>
-        <div class="container text-center flex justify-center p-5">
-            <div class="row items-center">
-                <div class="col-md-4">
-                    <img src="img/logo.png" class="miniLogo" />
-                </div>
-                <div class="col-md-8">
-                    <p class="body">
-                        Plantamos árboles nativos en el partido de General San Martin para fomentar el cuidado ambiental y la restauración ecológica. 
-                        Proponemos soluciones para lograr vivir en un ambiente más saludable.
-                    </p>
-                </div>
-            </div>
-            <div class="row items-center">
-                <div class="col-md-12">
-                    <img src="img/arbol.jpg" class="foto"/>
-                </div>
-            </div>
-            <div class="row items-center">
-                <div class="col-md-6">
-                    <div class="card-green">
-                        <h1 class="txtWhite">
-                            NUESTRO OBJETIVO
-                        </h1>
-                        <p class="body txtWhite">
-                            Promover la reforestación y la conservación de los ecosistemas naturales mediante la plantación de árboles con el objetivo de aumentar la biodiversidad, mitigar el cambio climático y mejorar la calidad del aire y el agua en nuestra comunidad.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card-green">
-                        <h1 class="txtWhite">
-                            NUESTRA VISIÓN
-                        </h1>
-                        <p class="body txtWhite">
-                            Nuestra visión es la de un futuro donde cada árbol plantado es un paso hacia la restauración de ecosistemas, la protección de la biodiversidad y la lucha contra el cambio climático.
-                        </p>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <div class="container">
-          <div class="d-flex justify-content-between p-3">
-            <img src="img/uade.png" id="uadeLogo" />
-            <ul class="list-unstyled">
-              <li class="nav-item">Grupo: 3</li>
-              <li class="nav-item">Profesora: Litovicius Patricia</li>
-              <li class="nav-item">Materia: Diseño y Desarrollo Web</li>
-              <li class="nav-item">Curso: 452527</li>
-            </ul>
+    <main id="image-bg">
+      <form action="">
+        <div class="container p-4">
+          <div class="row items-center">
+            <h2 class="text-center">CONTACTANOS</h2>
+              <div class="col-md-6">
+                <input type="text" placeholder="Nombre y Apellido" class="input-contact" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" placeholder="Correo electrónico" class="input-contact" required>
+              </div>
+              <div class="col-md-12">
+                <textarea placeholder="Escriba su mensaje aquí." class="input-contact textArea-contact" required></textarea>
+              </div>
+              <div class="col-md-12 items-center text-center">
+                <button type="submit" class="btn text-white" id="green-container">
+                  ENVIAR MENSAJE
+                </button>
+              </div>
+              
           </div>
         </div>
+      </form>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="d-flex justify-content-between p-3">
+          <img src="img/uade.png" id="uadeLogo" />
+          <ul class="list-unstyled">
+            <li class="nav-item">Grupo: 3</li>
+            <li class="nav-item">Profesora: Litovicius Patricia</li>
+            <li class="nav-item">Materia: Diseño y Desarrollo Web</li>
+            <li class="nav-item">Curso: 452527</li>
+          </ul>
+        </div>
+      </div>
     </footer>
+    <script type="text/javascript">
+      $(document).ready(function(){
+          $("form").submit(function(event){
+            event.preventDefault();
+            Swal.fire({
+              title: "Formulario Enviado",
+              text: "Te responderemos pronto",
+              icon: "success"
+            });
+            $("form input").val('');
+            $("form textarea").val('');
+          });
+      });
+      
+    </script>
   </body>
 </html>
